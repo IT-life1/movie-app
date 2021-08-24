@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Bulb from './Bulb';
+import HelloWorld from './1-project';
+// import App from './2-project';
+import Counter from './5-project';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Bulb />
+    <Counter />
   </React.StrictMode>,
   document.getElementById('root')
 );
