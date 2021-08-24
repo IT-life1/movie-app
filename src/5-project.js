@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { GlobalStyle } from './GlobalStyle';
 
 
 const StyledCounter = styled.section`
@@ -9,6 +10,7 @@ const StyledCounter = styled.section`
     height: 500px;
     border: 10px solid black;
     background: papayawhip;
+    margin: 0 auto;
 `;
 
 const Paragraph = styled.p`
@@ -46,12 +48,15 @@ export default class Counter extends React.Component {
 
     render() {
         return(
-            <StyledCounter>
-                <Paragraph>{this.state.count}</Paragraph>
-                <Paragraph>This is my first project!</Paragraph>
-                <IncrementButton onClick={this.incrementFunc}>+</IncrementButton>
-                <DecrementButton onClick={this.decrementFunc}>-</DecrementButton>
-            </StyledCounter>
+            <div className="center">
+                <GlobalStyle />
+                    <StyledCounter>
+                        <Paragraph>{this.state.count}</Paragraph>
+                        <Paragraph>This is my first project!</Paragraph>
+                        <IncrementButton onClick={this.incrementFunc}>+</IncrementButton>
+                        <DecrementButton onClick={this.decrementFunc}>-</DecrementButton>
+                    </StyledCounter>
+            </div>
         );
     }
 }
